@@ -5,4 +5,7 @@
     <string name="button2">Button2</string>
     <string name="button1">Button1</string>
     <string name="website">http://www.naver.com</string>
+    <string name="longlongtext">긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글</string>
+    <string name="main_desc">어쩌구</string>
+    <string name="password_txt">비밀번호 어쩌구</string>
 </resources>

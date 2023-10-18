@@ -5,12 +5,17 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+//import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.databinding.CheckboxBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         callbackMethod(paramFunc = {Log.d("myTag", "asd")})
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //val binding1 = ActivityMainBinding.inflate(layoutInflater)
+        //setContentView(binding1.root)
+        val binding2 = CheckboxBinding.inflate(layoutInflater)
+        setContentView(binding2.root)
     }
     private fun callbackMethod( paramFunc : ()-> Unit){
         Log.d("myTag","MainActivity called this func")
