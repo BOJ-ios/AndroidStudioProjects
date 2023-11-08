@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-import android.view.View
-//import com.example.myapplication.databinding.ActivityMainBinding
-//import com.example.myapplication.databinding.TestBinding
-//import com.example.myapplication.databinding.CheckboxBinding
+import android.view.KeyEvent
+import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.databinding.TestBinding
+import com.example.myapplication.databinding.CheckboxBinding
 import com.example.myapplication.databinding.RelativeBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,11 +16,11 @@ class MainActivity : AppCompatActivity() {
         callbackMethod(paramFunc = {Log.d("myTag", "asd")})
         super.onCreate(savedInstanceState)
         // * Bindings
-        //val binding1 = ActivityMainBinding.inflate(layoutInflater)
-        //val binding2 = CheckboxBinding.inflate(layoutInflater)
-        //val binding3 = Test.inflate(layoutInflater)
+        val binding1 = ActivityMainBinding.inflate(layoutInflater)
+        val binding2 = CheckboxBinding.inflate(layoutInflater)
+        val binding3 = TestBinding.inflate(layoutInflater)
         val binding4 = RelativeBinding.inflate(layoutInflater)
-        setContentView(binding4.root)
+        setContentView(binding1.root)
 
 
         /* ! Binding2
@@ -61,7 +61,14 @@ class MainActivity : AppCompatActivity() {
         }
         */
     }
-
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        Log.d("kkang", "onKeyDown")
+        return super.onKeyDown(keyCode, event)
+    }
+    override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
+        Log.d("kkang", "onKeyUp")
+        return super.onKeyUp(keyCode, event)
+    }
     private fun callbackMethod( paramFunc : ()-> Unit){
         Log.d("myTag","MainActivity called this func")
         Handler(Looper.getMainLooper()).postDelayed({

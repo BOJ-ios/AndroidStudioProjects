@@ -13,6 +13,10 @@
             android:id="@+id/image22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="244dp"
             android:contentDescription="@string/testimage"
             android:src="@drawable/img1"></ImageView>
 
@@ -30,19 +34,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="104dp"
-            android:layout_marginTop="178dp"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="126dp"
             android:text="Button" />
     </RelativeLayout>
 
-    <androidx.constraintlayout.Constraints
-        android:id="@+id/constraints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left" />
 </androidx.constraintlayout.widget.ConstraintLayout>
