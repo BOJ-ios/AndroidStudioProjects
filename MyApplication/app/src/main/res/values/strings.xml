@@ -6,7 +6,9 @@
     <string name="button1">Button1</string>
     <string name="website">http://www.naver.com</string>
     <string name="longlongtext">긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글</string>
-    <string name="main_desc">어쩌구</string>
-    <string name="password_txt">비밀번호 어쩌구</string>
+    <string name="main_desc">뭔가를 하고자하면 이메일과 비밀번호를 입력하시길바랍니다.</string>
+    <string name="password_txt">비밀번호가 기억나지 않나요?</string>
     <string name="testimage">testImage</string>
+    <string name="pwPlaceholder">비밀번호</string>
+    <string name="confirmBtnText">확인</string>
 </resources>

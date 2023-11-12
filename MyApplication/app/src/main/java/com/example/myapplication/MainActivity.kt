@@ -5,9 +5,14 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+<<<<<<< Updated upstream
 import android.view.KeyEvent
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.databinding.TestBinding
+=======
+import android.view.View
+import com.example.myapplication.databinding.ActivityMainBinding
+>>>>>>> Stashed changes
 import com.example.myapplication.databinding.CheckboxBinding
 import com.example.myapplication.databinding.RelativeBinding
 
@@ -18,7 +23,10 @@ class MainActivity : AppCompatActivity() {
         // * Bindings
         val binding1 = ActivityMainBinding.inflate(layoutInflater)
         val binding2 = CheckboxBinding.inflate(layoutInflater)
+<<<<<<< Updated upstream
         val binding3 = TestBinding.inflate(layoutInflater)
+=======
+>>>>>>> Stashed changes
         val binding4 = RelativeBinding.inflate(layoutInflater)
         setContentView(binding1.root)
 

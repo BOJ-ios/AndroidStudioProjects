@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_neutral60"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/main_desc"
-            android:textSize="17dp" />
+            android:textSize="17sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -33,12 +33,12 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="10dp"
-            android:background="#D4D4D3" />
+            android:background="#000000" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="비밀번호"
+            android:hint="@string/pwPlaceholder"
             android:inputType="textPassword" />
 
         <TextView
@@ -51,6 +51,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="확인" />
+            android:text="@string/confirmBtnText" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
