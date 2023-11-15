@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.countPlus.setOnClickListener{
+            val currentCount = Integer.parseInt(binding.count.text.toString())
+            binding.count.text = (currentCount + 1).toString()
+        }
         binding.startButton.setOnClickListener {
             binding.chronometer.base = SystemClock.elapsedRealtime() + pauseTime
             binding.chronometer.start()
@@ -28,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         binding.stopButton.setOnClickListener {
             pauseTime = binding.chronometer.base - SystemClock.elapsedRealtime()
             binding.chronometer.stop()
+            // 버튼 표시 여부 조정
             binding.stopButton.isEnabled = false
             binding.resetButton.isEnabled = true
             binding.startButton.isEnabled = true
@@ -36,6 +41,7 @@ class MainActivity : AppCompatActivity() {
             pauseTime = 0L
             binding.chronometer.base = SystemClock.elapsedRealtime()
             binding.chronometer.stop()
+            // 버튼 표시 여부 조정
             binding.stopButton.isEnabled = false
             binding.resetButton.isEnabled = false
             binding.startButton.isEnabled = true
