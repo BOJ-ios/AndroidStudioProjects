@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-<<<<<<< Updated upstream
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
@@ -14,9 +13,11 @@ import android.widget.Toast
 import com.example.myapplication.databinding.ActivityMainBinding
 <<<<<<< Updated upstream
 import com.example.myapplication.databinding.TestBinding
-=======
 import android.view.View
 import com.example.myapplication.databinding.ActivityMainBinding
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -43,10 +44,7 @@ class MainActivity : AppCompatActivity() {
         // * Bindings
         val binding1 = ActivityMainBinding.inflate(layoutInflater)
         val binding2 = CheckboxBinding.inflate(layoutInflater)
-<<<<<<< Updated upstream
         val binding3 = TestBinding.inflate(layoutInflater)
-=======
->>>>>>> Stashed changes
         val binding4 = RelativeBinding.inflate(layoutInflater)
         setContentView(binding1.root)
 
