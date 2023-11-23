@@ -11,18 +11,8 @@ import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import com.example.myapplication.databinding.ActivityMainBinding
-<<<<<<< Updated upstream
 import com.example.myapplication.databinding.TestBinding
-import android.view.View
-import com.example.myapplication.databinding.ActivityMainBinding
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 import com.example.myapplication.databinding.CheckboxBinding
-import com.example.myapplication.databinding.TestBinding
 import com.example.myapplication.databinding.RelativeBinding
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         callbackMethod(paramFunc = {Log.d("myTag", "asd")})
         super.onCreate(savedInstanceState)
-        // * Bindings
+        // * Binding values
         val binding1 = ActivityMainBinding.inflate(layoutInflater)
         val binding2 = CheckboxBinding.inflate(layoutInflater)
         val binding3 = TestBinding.inflate(layoutInflater)
@@ -49,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding1.root)
 
 
-        //! Binding2
+        // * Binding2
         binding2.visibleCheckBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 binding2.letsGo.visibility = View.VISIBLE // radioSelect가 binding2에 있는 뷰의 id라고 가정합니다.
@@ -63,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             binding2.choice.text = radio.text  // choice는 TextView의 ID
         }
 
-        // ! Binding4
+        // * Binding4
         binding4.image22.setOnClickListener{
             binding4.image22.visibility = View.GONE
             binding4.btn22.visibility = View.VISIBLE
