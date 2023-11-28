@@ -35,8 +35,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "no app...", Toast.LENGTH_SHORT).show()
             }
         }
-
-
         /*
         binding.button2.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:37.7749,127.4194"))
