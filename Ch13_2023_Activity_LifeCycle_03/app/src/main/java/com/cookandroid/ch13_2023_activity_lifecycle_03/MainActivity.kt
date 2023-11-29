@@ -6,8 +6,9 @@ import android.util.Log
 import com.cookandroid.ch13_2023_activity_lifecycle_03.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    var count = 0
-    lateinit var binding: ActivityMainBinding
+    private var count = 0
+    private var rotateCount = 0
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
@@ -17,23 +18,27 @@ class MainActivity : AppCompatActivity() {
         binding.plusCountButton.setOnClickListener {
             count++
             binding.countResultView.text="$count"
+            binding.text1.text="$rotateCount"
             Log.d("yang","Count Button Listener..........")
         } //카운트 증가
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        val data1 = savedInstanceState.getString("data1")
+        Log.d("yang","onRestoreInstanceState..........")
+        val data1 = savedInstanceState.getInt("rotateCount")
         val data2 = savedInstanceState.getInt("count")
+        rotateCount = data1 + 1
         count = data2 //변수 값을 유지하기 위해 사용
-        binding.countResultView.text="$data2" //저장 기능이 없으면 값이 사라짐
+        binding.text1.text="$rotateCount" //저장 기능이 없으면 값이 사라짐
+        binding.countResultView.text="$count" //저장 기능이 없으면 값이 사라짐
         // binding.countResultView.text="$data1 - $data2" //저장 기능이 없으면 값이 사라짐
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Log.d("yang","onSaveInstanceState..........")
-        outState.putString("data1", "hello")
+        outState.putInt("rotateCount", rotateCount)
         outState.putInt("count", count)
     }
 
